@@ -1,0 +1,38 @@
+<div ng-controller="NewContactController">
+  <h2>Add Player Profile</h2>
+  <p>stay updated on this and new games from Blue Winter</p>
+    <% @contact.errors.full_messages.each do |e| %>
+      <p><%= e %></p>
+    <% end %>
+  <%= form_tag('/contacts') do %>
+
+    <div class="form-group">
+      <%= text_field_tag 'firstname', @contact.firstname, placeholder: "first name", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= text_field_tag 'lastname', @contact.lastname, placeholder: "last name", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= email_field_tag 'email', @contact.email, placeholder: "email", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= text_field_tag 'birth_year', @contact.birth_year, placeholder: "year of birth", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <label>played parallel?
+        <input type="checkbox" name="played_parallel" ng-model="played_parallel">
+      </label>
+    </div>
+
+    <div class="form-group" ng-show="played_parallel">
+      <%= text_area_tag 'feedback', @playtest.feedback, placeholder: "add some feedback for us...", class: "form-control" %>
+    </div>
+
+    <div><%= submit_tag 'Save' %></div>
+
+  <% end %>
+</div>
