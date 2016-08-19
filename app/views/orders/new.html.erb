@@ -2,8 +2,9 @@
   <%= form_tag('/contacts') do %>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h2>Add Player Profile</h2>
-        <p>stay updated on this and new games from Blue Winter</p>
+        <h2>Order a Copy</h2>
+        <p>We will contact you shortly after convention to arrange delivery.</p> 
+        <p>Giving us your shipping info now will make it easier to get you your copy faster.</p>
         <% @contact.errors.full_messages.each do |e| %>
           <p><%= e %></p>
         <% end %>
@@ -21,18 +22,10 @@
         <div class="form-group">
           <%= text_field_tag 'birth_year', @contact.birth_year, placeholder: "year of birth", class: "form-control" %>
         </div>
-        <div class="form-group">
-          <label>did you get a chance to play the game?
-            <input type="checkbox" name="played_parallel" ng-model="played_parallel">
-          </label>
-        </div>
-        <div class="form-group" ng-show="played_parallel">
-          <%= text_area_tag 'feedback', @playtest.feedback, placeholder: "add some feedback for us...", class: "form-control" %>
-        </div>
       </div>
       <div class="panel-footer">
         <div>
-          <%= submit_tag 'Save', class: "btn btn-info" %>
+          <%= submit_tag 'Order', class: "btn btn-info" %>
           <%= link_to 'Cancel', '/', class: "btn btn-danger" %>
         </div>
       </div>

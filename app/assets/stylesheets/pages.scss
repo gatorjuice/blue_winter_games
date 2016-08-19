@@ -1,3 +1,22 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body { 
+  padding-top: 20px;
+  background: url(background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.jumbotron, .panel {
+  background-color: rgba(238, 238, 238, 0.9);
+  text-align: center;
+}
+
+img {
+  max-height: 200px;
+}
