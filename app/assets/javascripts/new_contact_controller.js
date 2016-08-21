@@ -7,7 +7,5 @@
     $scope.test = () => {
       console.log('helo');
     }
-
-    window.scope = $scope;
   }]);
 })();
