@@ -1,0 +1,23 @@
+{
+  "name": "blue_winter_games",
+  "version": "1.0.0",
+  "description": "== README",
+  "main": "application.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatorjuice/blue_winter_games.git"
+  },
+  "author": "James Gates (http://leapfrogonline.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gatorjuice/blue_winter_games/issues"
+  },
+  "homepage": "https://github.com/gatorjuice/blue_winter_games#readme",
+  "devDependencies": {
+    "http": "0.0.0",
+    "requirejs": "^2.2.0"
+  }
+}

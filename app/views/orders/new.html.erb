@@ -1,11 +1,11 @@
 <div class="col-md-8 col-md-offset-2 col-sm-12" ng-controller="NewContactController">
-  <%= form_tag('/contacts') do %>
+  <%= form_tag('/orders') do %>
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h2>Order a Copy</h2>
-        <p>We will contact you shortly after convention to arrange delivery.</p> 
+        <h2>PreOrder a Copy</h2>
+        <p>We will contact you shortly after convention to arrange delivery.</p>
         <p>Giving us your shipping info now will make it easier to get you your copy faster.</p>
-        <% @contact.errors.full_messages.each do |e| %>
+        <% @order.errors.full_messages.each do |e| %>
           <p><%= e %></p>
         <% end %>
       </div>
@@ -20,12 +20,33 @@
           <%= email_field_tag 'email', @contact.email, placeholder: "email", class: "form-control" %>
         </div>
         <div class="form-group">
+          <%= text_field_tag 'twitter', @contact.twitter, placeholder: "twitter handle", class: "form-control" %>
+        </div>
+        <div class="form-group">
           <%= text_field_tag 'birth_year', @contact.birth_year, placeholder: "year of birth", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'address', @order.address, placeholder: "shipping address", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'city', @order.city, placeholder: "city", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'state', @order.state, placeholder: "state", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'zipcode', @order.zipcode, placeholder: "zipcode", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag 'phone', @order.phone, placeholder: "phone", class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= number_field_tag 'quantity', @order.quantity, placeholder: "quantity", class: "form-control" %>
         </div>
       </div>
       <div class="panel-footer">
         <div>
-          <%= submit_tag 'Order', class: "btn btn-info" %>
+          <%= submit_tag 'Continue', class: "btn btn-info" %>
           <%= link_to 'Cancel', '/', class: "btn btn-danger" %>
         </div>
       </div>

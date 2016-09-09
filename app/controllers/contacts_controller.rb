@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
       firstname: params[:firstname],
       lastname: params[:lastname],
       email: params[:email],
+      twitter: params[:twitter],
       birth_year: params[:birth_year],
     )
     @playtest = Playtest.new()
@@ -19,9 +20,6 @@ class ContactsController < ApplicationController
         @playtest.feedback = params[:feedback]
         @playtest.save
       end
-      redirect_to '/contacts/new'
-    else
-      render 'new.html.erb'
     end
   end
 end

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post '/contacts' => 'contacts#create'
 
   get '/orders/new' => 'orders#new'
+  post '/orders' => 'orders#create'
 end
