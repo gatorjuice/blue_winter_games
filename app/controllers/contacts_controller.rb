@@ -21,5 +21,6 @@ class ContactsController < ApplicationController
         @playtest.save
       end
     end
+    redirect_to '/'
   end
 end
